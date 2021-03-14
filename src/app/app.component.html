@@ -9,7 +9,7 @@
     <label for="age">Age</label>
     <input required ngModel name="age" #age="ngModel" id="age" type="number" class="form-control">
     <div class="alert alert-danger" *ngIf="age.touched && !age.valid">
-      <div *ngIf="userName.errors.required">Username is required.</div>
+      <div *ngIf="userName.errors.required">Age is required.</div>
     </div>
   <button class="btn btn-primary">Submit</button>
   </div>
