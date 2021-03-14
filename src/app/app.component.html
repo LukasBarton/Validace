@@ -7,9 +7,9 @@
       <div *ngIf="userName.errors.minlength">Username should be min {{ userName.errors.minlength.requiredLength}} characters.</div>
     </div>
     <label for="age">Age</label>
-    <input required ngModel name="age" #age="ngModel" id="age" type="number" class="form-control">
+    <input required min="1" max="100" ngModel name="age" #age="ngModel" (change)="log(age)" id="age" type="number" class="form-control">
     <div class="alert alert-danger" *ngIf="age.touched && !age.valid">
-      <div *ngIf="userName.errors.required">Age is required.</div>
+      <div *ngIf="age.errors.required">Username is required.</div>
     </div>
   <button class="btn btn-primary">Submit</button>
   </div>
